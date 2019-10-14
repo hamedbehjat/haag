@@ -2,14 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>fullPage.js A simple Demo</title>
+	<title>HAAG band</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage very simple demo." />
 	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
 	<meta name="Resource-type" content="Document" />
 
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="plugins/fontawsome/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">  -->
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
@@ -17,6 +21,13 @@
 </head>
 
 <body>
+
+<nav id="menu">
+    <a class="menu-links hideme" data-menuanchor="firstPage" href="#firstPage">Home</a>
+    <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">About</a>
+    <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">Links</a>
+    <a class="menu-links" data-menuanchor="4thpage" href="#4thpage">Buy</a>
+</nav>
 
 <div id="fullpage">
 	<div class="section active" id="section0">
@@ -54,7 +65,20 @@
             
         
     </div>
-	<div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+	<div class="section container" id="section3">
+
+        <a href="#spotify" target="_blank"><i class="fa fa-spotify"></i></a>
+        <a href="#amazon" target="_blank"><i class="fa fa-amazon"></i></a>
+        <a href="#apple" target="_blank"><i class="fa fa-apple"></i></a>
+        <a href="#youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="#intagram" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+
+        <br>
+
+        <span class="copyright">@2019 HAAG. All Rights Reserved. Privacy Policy</span>
+
+    </div>
 </div>
 
 
@@ -66,9 +90,14 @@
 
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#d0d1c0', '#d0d1c0', '#d0d1c0', '#d0d1c0', '#d0d1c0']
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu'
 	});
 </script>
+
+<!-- <script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage');
+</script> -->
 
 </body>
 </html>
