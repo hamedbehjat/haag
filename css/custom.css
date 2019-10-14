@@ -102,9 +102,8 @@ p{
 }
 
 #section0 img{
-
     height: 80%;
-
+    max-width: 100%;
 }
 
 #section1 {
@@ -124,7 +123,6 @@ p{
 
 #section3 i {
     font-size: 40px;
-    /* padding: 0 10px; */
     color: #000000;
 }
 
@@ -136,4 +134,26 @@ p{
     text-transform: uppercase;
     padding: 20px 0;
     display: block;
+}
+
+@media only screen and (max-width:480px) {
+    #section0 img{
+        height: auto;
+        max-width: 100%;
+    }
+
+    #section1 h1{
+        font-size: 16px;
+    }
+
+    #section1 p{
+        font-size: 14px;
+    }
+
+    #section2 .haag-btn {
+        margin: 10px 0;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+    }
 }
