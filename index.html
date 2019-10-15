@@ -23,11 +23,19 @@
 <body>
 
 <nav id="menu">
-    <a class="menu-links hideme" data-menuanchor="firstPage" href="#firstPage">Home</a>
-    <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">About</a>
-    <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">Links</a>
-    <a class="menu-links" data-menuanchor="4thpage" href="#4thpage">Buy</a>
+    <div class="container">
+        <img src="img/haagLogo.png" alt="haag rock band logo" class="logo">
+        <button class="fa fa-bars" onclick="document.getElementById('overlay-menu').classList.add('reveal')"></button>
+    </div>
 </nav>
+
+<div id="overlay-menu">
+    <a class="menu-links hideme" onclick="document.getElementById('overlay-menu').classList.remove('reveal')" data-menuanchor="firstPage" href="#firstPage">Home</a>
+    <a class="menu-links" onclick="document.getElementById('overlay-menu').classList.remove('reveal')" data-menuanchor="secondPage" href="#secondPage">About</a>
+    <a class="menu-links" onclick="document.getElementById('overlay-menu').classList.remove('reveal')" data-menuanchor="3rdPage" href="#3rdPage">Links</a>
+    <a class="menu-links" onclick="document.getElementById('overlay-menu').classList.remove('reveal')" data-menuanchor="4thpage" href="#4thpage">Buy</a>
+    <button class="fa fa-close" onclick="document.getElementById('overlay-menu').classList.remove('reveal')"></button>
+</div>
 
 <div id="fullpage">
 	<div class="section active" id="section0">

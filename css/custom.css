@@ -50,13 +50,14 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
-/* Custom CSS
- * --------------------------------------- */
- body{
+/* ***************************************** */
+/* ***************************************** */
+
+/* custom codes */
+
+body{
     font-family: 'Oswald', sans-serif;
     background: #d0d1c0;
-	/* color: #333; */
-	/* color: rgba(0,0,0,0.5); */
 }
 .wrap{
 	margin-left: auto;
@@ -76,6 +77,8 @@ p{
 	font-size: 1.5em;
 }
 
+/* ***************************************** */
+/* menu bar */
 
 #menu {
     position: fixed;
@@ -94,6 +97,60 @@ p{
     line-height: 60px;
 }
 
+#menu .logo {
+    height: 55px;
+}
+
+#menu .fa-bars {
+    color: #d0d1c0;
+    font-size: 25px;
+    padding: 0 10px;
+    line-height: 60px;
+    background: none;
+    border: none;
+}
+
+/* ***************************************** */
+/* overlay menu */
+
+#overlay-menu {
+    display: none;
+}
+
+#overlay-menu.reveal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    color: #818379;
+    z-index: 100;
+    text-align: center;
+}
+
+#overlay-menu.reveal a {
+    color: #ffffff;
+    padding: 0 20px 0 10px;
+    position: relative;
+    top: 100px;
+    font-size: 3em;
+}
+
+#overlay-menu.reveal .fa-close {
+    color: #ffffff;
+    padding: 0 20px 0 10px;
+    position: relative;
+    top: 100px;
+    font-size: 3em;
+    background: none;
+    border: none;
+}
+
+/* ***************************************** */
+/* sections */
 
 .section{
     background: #d0d1c0;
@@ -136,7 +193,15 @@ p{
     display: block;
 }
 
+/* ***************************************** */
+/* responsive codes */
+
 @media only screen and (max-width:480px) {
+
+    #overlay-menu.reveal a {
+        display: block;
+    }
+
     #section0 img{
         height: auto;
         max-width: 100%;
